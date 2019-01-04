@@ -1,0 +1,33 @@
+[server]
+host = "10.1.0.2"
+port = 40500
+http-port = 40502
+metrics-port = 40503
+no-upnp = true
+default-timeout = 2000
+bootstrap = "rnode://7c2b4c8ed9ab97924f0ff054dafb93f46e912c5a@localhost?protocol=40400&discovery=40404"
+standalone = false
+#data-dir = "/datadir"
+map-size = 1073741824
+casper-block-store-size = 1073741824
+in-memory-store = false
+max-num-of-connections = 500
+[grpc-server]
+host = "localhost"
+port = 40501
+port-internal = 40504
+[tls]
+#certificate = "/var/lib/rnode/certificate.pem"
+#key = "/var/lib/rnode/key.pem"
+[validators]
+count = 5
+shard-id = "wbtest"
+sig-algorithm = "ed25519"
+bonds-file = "/root/.rnode/genesis"
+private-key = "7fa626af8e4b96797888e6fc6884ce7c278c360170b13e4ce4000090c6f2bab9"
+[kamon]
+prometheus = false
+influx-db = true
+[influx-db]
+hostname = "localhost"
+port = 8086

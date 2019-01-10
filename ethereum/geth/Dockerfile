@@ -10,4 +10,6 @@ RUN git clone https://github.com/zscole/go-ethereum
 WORKDIR /go-ethereum
 RUN make all
 
+ENV PATH /go-ethereum/build/bin:${PATH}
+
 ENTRYPOINT ["/bin/bash"]

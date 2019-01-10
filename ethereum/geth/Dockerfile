@@ -1,4 +1,4 @@
-FROM ubuntu:latest as base
+FROM ubuntu:latest 
 
 ENV DEBIAN_FRONTEND noninteractive
 

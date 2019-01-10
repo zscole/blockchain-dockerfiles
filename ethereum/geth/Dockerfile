@@ -1,10 +1,13 @@
-FROM ubuntu:latest
+FROM ubuntu:latest as base
 
-RUN apt-get update && apt-get install -y \
-	apt-utils iputils-ping expect npm git git-extras software-properties-common tmux
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN add-apt-repository -y ppa:ethereum/ethereum &&\ 
-	apt update &&\ 
-	apt-get install -y ethereum
+RUN apt-get update &&\ 
+	apt-get install -y apt-utils iputils-ping expect npm git git-extras software-properties-common tmux \
+    vim inetutils-tools wget ca-certificates curl build-essential libssl-dev golang-go make
+
+RUN git clone https://github.com/zscole/go-ethereum
+WORKDIR /go-ethereum
+RUN make all
 
 ENTRYPOINT ["/bin/bash"]

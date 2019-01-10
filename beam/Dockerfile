@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test && apt-get update
 RUN apt-get install -y apt-utils ca-certificates curl git-all cmake build-essential \
-    vim inetutils-tools wget libboost-all-dev libssl-dev libdrm-dev g++ gcc
+    vim inetutils-tools wget libboost-all-dev libssl-dev libdrm-dev g++ gcc ping
 
 RUN git clone https://github.com/BeamMW/beam
 WORKDIR /beam

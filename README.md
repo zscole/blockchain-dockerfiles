@@ -1,3 +1,2 @@
-A bunch of Dockerfiles for different blockchain systems. I wrote these for testing purposes.  
-These are also available on Docker Hub.
-https://hub.docker.com/u/zcole
+A library of Dockerfiles for various popular blockchain systems. I wrote these for testing purposes.  
+Most of them are also available on my [Docker Hub](https://hub.docker.com/u/zcole).
